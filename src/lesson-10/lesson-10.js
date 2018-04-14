@@ -97,8 +97,6 @@ function login () {
     }
 }
 
-
-
 function addElement () {
     const newElement = document.createElement('div');
     console.log(newElement);
