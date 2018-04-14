@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local("SF Pro Display"), url(../assets/fonts/sf-pro-display_regular.woff2) format("woff2");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local("SF Pro Display"), url(../assets/fonts/sf-pro-display_light.woff2) format("woff2");
+  font-weight: 200; }
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local("SF Pro Display"), url(../assets/fonts/sf-pro-display_semibold.woff2) format("woff2");
+  font-weight: 600; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: "SF Pro Display", Verdana, sans-serif; }
+
+html, body, h1, h2, h3, h4, ul, ol, p {
+  margin: 0;
+  padding: 0; }
+
+button, input {
+  border: 0; }
+
+body {
+  background-color: #2b2b2b; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.page-wrapper {
+  max-width: 960px;
+  min-height: 100vh;
+  background-color: white;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: start;
+      align-items: start; }
+  .page-wrapper__form {
+    width: 80%;
+    padding: 10rem 2rem 2rem 2rem; }
+  .page-wrapper .content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    min-width: 250px;
+    text-align: center; }
+    .page-wrapper .content__name {
+      height: 3rem;
+      padding-left: 0.5rem;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      border: 2px solid silver; }
+    .page-wrapper .content__comment {
+      height: 10rem;
+      padding: 0.5rem;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      border: 2px solid #66b4fe; }
+    .page-wrapper .content__btn {
+      background-color: #47a0fe;
+      height: 3rem;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 4px; }
+
+.name-view {
+  color: #007ee7;
+  padding: 2rem 0 0.5rem 0; }
+
+.comment-view {
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #d4d4d4; }
