@@ -4,6 +4,7 @@ import './lesson-12.scss';
 const yellowLighter = document.querySelector('.yellow');
 const greenLighter = document.querySelector('.green');*/
 
+//Светофор
 function lighter(htmlElement) {
     console.log(htmlElement);
     const lighters = htmlElement.querySelectorAll('.light');
@@ -43,3 +44,20 @@ greenLighter.onclick = function () {
 };
 */
 
+//При нажатии на кнопку загорается лампа, при повторном нажатии лампа тухнет.
+function lampOnOff(htmlElement) {
+    console.log(htmlElement);
+    const lamp = htmlElement.querySelector('.lamp');
+    const button = htmlElement.querySelector('.button');
+    button.onclick = function () {
+        if(lamp.classList.contains('active')){
+            lamp.classList.remove('active');
+        }
+        else {
+            lamp.classList.add('active');
+        }
+    }
+}
+lampOnOff(document.querySelector('#firstLamp'));
+lampOnOff(document.querySelector('#secondLamp'));
+lampOnOff(document.querySelector('#thirdLamp'));
