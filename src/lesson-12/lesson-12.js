@@ -5,7 +5,7 @@ const yellowLighter = document.querySelector('.yellow');
 const greenLighter = document.querySelector('.green');*/
 
 //Светофор
-function lighter(htmlElement) {
+/*function lighter(htmlElement) {
     console.log(htmlElement);
     const lighters = htmlElement.querySelectorAll('.light');
     for(let light of lighters) {
@@ -22,7 +22,7 @@ function lighter(htmlElement) {
 }
 lighter(document.querySelector('#lighterFirst'));
 lighter(document.querySelector('#lighterSecond'));
-lighter(document.querySelector('#lighterThird'));
+lighter(document.querySelector('#lighterThird'));*/
 
 
 /*function alert (message) {
@@ -45,7 +45,7 @@ greenLighter.onclick = function () {
 */
 
 //При нажатии на кнопку загорается лампа, при повторном нажатии лампа тухнет.
-function lampOnOff(htmlElement) {
+/*function lampOnOff(htmlElement) {
     console.log(htmlElement);
     const lamp = htmlElement.querySelector('.lamp');
     const button = htmlElement.querySelector('.button');
@@ -60,4 +60,9 @@ function lampOnOff(htmlElement) {
 }
 lampOnOff(document.querySelector('#firstLamp'));
 lampOnOff(document.querySelector('#secondLamp'));
-lampOnOff(document.querySelector('#thirdLamp'));
+lampOnOff(document.querySelector('#thirdLamp'));*/
+
+
+
+
+
