@@ -4,13 +4,15 @@
 
 html {
   font-family: $baseFontFamily;
+}
+
+html, body, h1,h2, h3, h4, ul, ol, p {
+  margin: 0;
   padding: 0;
 }
 
-body, h1,h2, h3, h4, ul, ol, p {
-  margin: 0;
-  padding: 0;
-  background-color: rgba(49,51,53,1);
+button, input {
+  border: 0;
 }
 
 ul, ol {
