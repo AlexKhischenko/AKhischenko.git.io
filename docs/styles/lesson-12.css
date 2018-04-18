@@ -1,20 +1,39 @@
-.lighter {
-  border: 1px solid gray;
-  margin: 0 auto;
-  width: 60px; }
+body {
+  font-family: sans-serif; }
 
-.light {
-  border: 1px solid gray;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin: 0.5rem auto; }
-
-.red.active {
-  background: red; }
-
-.yellow.active {
-  background: yellow; }
-
-.green.active {
-  background: green; }
+.dropdown {
+  position: relative; }
+  .dropdown > * {
+    box-sizing: border-box; }
+  .dropdown-countries {
+    max-width: 300px;
+    margin: 0 auto; }
+  .dropdown__title {
+    background: #314fcf;
+    color: #FFF;
+    padding: 0.5rem;
+    text-align: right; }
+    .dropdown__title:focus {
+      background-color: #8496e2; }
+  .dropdown__options {
+    -ms-transform: scaleY(0);
+        transform: scaleY(0);
+    -ms-transform-origin: top;
+        transform-origin: top;
+    transition: all 0.5s;
+    visibility: hidden;
+    width: 100%;
+    background: #FFF;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.17);
+    z-index: 1; }
+  .dropdown__option:focus {
+    background-color: #8496e2; }
+  .dropdown.active .dropdown__options {
+    -ms-transform: scaleY(1);
+        transform: scaleY(1);
+    visibility: visible; }

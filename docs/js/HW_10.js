@@ -60,18 +60,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 10:
+/***/ 12:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(13);
+
+
+/***/ }),
+
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(11);
+__webpack_require__(14);
 
 var addCommentButton = document.querySelector('#addCommentButton'),
     newElements = document.querySelector('#newElements'),
@@ -99,18 +107,10 @@ addCommentButton.addEventListener('click', addComment);
 
 /***/ }),
 
-/***/ 11:
+/***/ 14:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(10);
-
 
 /***/ })
 

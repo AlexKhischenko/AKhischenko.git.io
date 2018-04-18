@@ -60,123 +60,96 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 6:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(7);
-
-
-/***/ }),
-
-/***/ 7:
+/***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(8);
+__webpack_require__(11);
 
-/*const redLighter = document.querySelector('.red');
-const yellowLighter = document.querySelector('.yellow');
-const greenLighter = document.querySelector('.green');*/
+/**
+ * @param {Element} dropdownContainer Html element for dropdown
+ * */
+function dropdown(dropdownContainer) {
+    var title = dropdownContainer.querySelector('.dropdown__title');
+    var options = dropdownContainer.querySelectorAll('.dropdown__option');
+    var isOpened = dropdownContainer.classList.contains('active');
 
-function lighter(htmlElement) {
-    console.log(htmlElement);
-    var lighters = htmlElement.querySelectorAll('.light');
+    function open() {
+        dropdownContainer.classList.add('active');
+        isOpened = true;
+        document.addEventListener('click', close);
+    }
 
-    var _loop = function _loop(light) {
-        light.onclick = function () {
-            toggleOff();
-            light.classList.add('active');
-        };
-    };
+    function close() {
+        console.log('Drop down closed');
+        dropdownContainer.classList.remove('active');
+        isOpened = false;
+        document.removeEventListener('click', close);
+    }
 
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-        for (var _iterator = lighters[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-            var light = _step.value;
-
-            _loop(light);
-        }
-    } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-    } finally {
-        try {
-            if (!_iteratorNormalCompletion && _iterator.return) {
-                _iterator.return();
-            }
-        } finally {
-            if (_didIteratorError) {
-                throw _iteratorError;
-            }
+    function toggleDropdown() {
+        if (isOpened) {
+            close();
+        } else {
+            open();
         }
     }
 
-    function toggleOff() {
-        var _iteratorNormalCompletion2 = true;
-        var _didIteratorError2 = false;
-        var _iteratorError2 = undefined;
-
-        try {
-            for (var _iterator2 = lighters[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                var light = _step2.value;
-
-                light.classList.remove('active');
-            }
-        } catch (err) {
-            _didIteratorError2 = true;
-            _iteratorError2 = err;
-        } finally {
-            try {
-                if (!_iteratorNormalCompletion2 && _iterator2.return) {
-                    _iterator2.return();
-                }
-            } finally {
-                if (_didIteratorError2) {
-                    throw _iteratorError2;
-                }
-            }
-        }
+    function changeTitle(text) {
+        title.textContent = text;
+        close();
     }
-}
-lighter(document.querySelector('#lighterFirst'));
-lighter(document.querySelector('#lighterSecond'));
-lighter(document.querySelector('#lighterThird'));
 
-/*function alert (message) {
-    console.log('Your message: ' + message)
+    title.addEventListener('click', function (eventObject) {
+        console.log(eventObject);
+        eventObject.stopPropagation();
+        toggleDropdown();
+    });
+
+    title.addEventListener('keypress', function (eventObject) {
+        console.log(eventObject);
+        console.log('Keypressed');
+        if (eventObject.keyCode === 13) {
+            toggleDropdown();
+        }
+    });
+
+    options.forEach(function (option) {
+        option.addEventListener('click', function () {
+            changeTitle(option.textContent);
+        });
+        option.addEventListener('keypress', function (eventObject) {
+            if (eventObject.keyCode === 13) {
+                changeTitle(option.textContent);
+            }
+        });
+    });
 }
-alert('dkjfkls');
-alert('Hello');
-alert('Alex');
-console.log(lighters);*/
-/*
-redLighter.onclick = function () {
-    redLighter.classList.add('active');
-};
-yellowLighter.onclick = function () {
-    yellowLighter.classList.add('active');
-};
-greenLighter.onclick = function () {
-    greenLighter.classList.add('active');
-};
-*/
+
+dropdown(document.querySelector('#countries'));
+dropdown(document.querySelector('#movies'));
 
 /***/ }),
 
-/***/ 8:
+/***/ 11:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(10);
+
 
 /***/ })
 
