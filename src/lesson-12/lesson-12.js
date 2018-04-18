@@ -1,68 +1,64 @@
-import './lesson-12.scss';
+import './lesson-12.scss'
 
-/*const redLighter = document.querySelector('.red');
-const yellowLighter = document.querySelector('.yellow');
-const greenLighter = document.querySelector('.green');*/
+/**
+ * @param {Element} dropdownContainer Html element for dropdown
+ * */
+function dropdown (dropdownContainer) {
+    const title = dropdownContainer.querySelector('.dropdown__title');
+    const options = dropdownContainer.querySelectorAll('.dropdown__option');
+    let isOpened = dropdownContainer.classList.contains('active');
 
-//Светофор
-/*function lighter(htmlElement) {
-    console.log(htmlElement);
-    const lighters = htmlElement.querySelectorAll('.light');
-    for(let light of lighters) {
-        light.onclick = function () {
-            toggleOff();
-            light.classList.add('active');
+    function open() {
+        dropdownContainer.classList.add('active');
+        isOpened = true;
+        document.addEventListener('click', close);
+    }
+
+    function close() {
+        console.log('Drop down closed');
+        dropdownContainer.classList.remove('active');
+        isOpened = false;
+        document.removeEventListener('click', close);
+    }
+
+    function toggleDropdown() {
+        if(isOpened) {
+            close();
+        } else {
+            open();
         }
     }
-    function toggleOff() {
-        for (let light of lighters) {
-            light.classList.remove('active');
-        }
+
+    function changeTitle(text) {
+        title.textContent = text;
+        close();
     }
-}
-lighter(document.querySelector('#lighterFirst'));
-lighter(document.querySelector('#lighterSecond'));
-lighter(document.querySelector('#lighterThird'));*/
 
+    title.addEventListener('click', (eventObject) => {
+        console.log(eventObject);
+        eventObject.stopPropagation();
+        toggleDropdown()
+    });
 
-/*function alert (message) {
-    console.log('Your message: ' + message)
-}
-alert('dkjfkls');
-alert('Hello');
-alert('Alex');
-console.log(lighters);*/
-/*
-redLighter.onclick = function () {
-    redLighter.classList.add('active');
-};
-yellowLighter.onclick = function () {
-    yellowLighter.classList.add('active');
-};
-greenLighter.onclick = function () {
-    greenLighter.classList.add('active');
-};
-*/
-
-//При нажатии на кнопку загорается лампа, при повторном нажатии лампа тухнет.
-/*function lampOnOff(htmlElement) {
-    console.log(htmlElement);
-    const lamp = htmlElement.querySelector('.lamp');
-    const button = htmlElement.querySelector('.button');
-    button.onclick = function () {
-        if(lamp.classList.contains('active')){
-            lamp.classList.remove('active');
+    title.addEventListener('keypress', (eventObject) => {
+        console.log(eventObject);
+        console.log('Keypressed');
+        if (eventObject.keyCode === 13) {
+            toggleDropdown();
         }
-        else {
-            lamp.classList.add('active');
-        }
-    }
+    });
+
+    options.forEach((option) => {
+        option.addEventListener('click', () => {
+            changeTitle(option.textContent);
+        });
+        option.addEventListener('keypress', (eventObject) => {
+            if (eventObject.keyCode === 13) {
+                changeTitle(option.textContent);
+            }
+        });
+    });
 }
-lampOnOff(document.querySelector('#firstLamp'));
-lampOnOff(document.querySelector('#secondLamp'));
-lampOnOff(document.querySelector('#thirdLamp'));*/
 
-
-
-
-
+dropdown(document.querySelector('#countries'));
+dropdown(document.querySelector('#movies'));
