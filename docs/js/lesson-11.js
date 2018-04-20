@@ -81,6 +81,115 @@ module.exports = __webpack_require__(7);
 
 __webpack_require__(8);
 
+/*const redLighter = document.querySelector('.red');
+const yellowLighter = document.querySelector('.yellow');
+const greenLighter = document.querySelector('.green');*/
+
+//Светофор
+function lighter(htmlElement) {
+    console.log(htmlElement);
+    var lighters = htmlElement.querySelectorAll('.light');
+
+    var _loop = function _loop(light) {
+        light.onclick = function () {
+            toggleOff();
+            light.classList.add('active');
+        };
+    };
+
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = lighters[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var light = _step.value;
+
+            _loop(light);
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
+    }
+
+    function toggleOff() {
+        var _iteratorNormalCompletion2 = true;
+        var _didIteratorError2 = false;
+        var _iteratorError2 = undefined;
+
+        try {
+            for (var _iterator2 = lighters[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                var light = _step2.value;
+
+                light.classList.remove('active');
+            }
+        } catch (err) {
+            _didIteratorError2 = true;
+            _iteratorError2 = err;
+        } finally {
+            try {
+                if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                    _iterator2.return();
+                }
+            } finally {
+                if (_didIteratorError2) {
+                    throw _iteratorError2;
+                }
+            }
+        }
+    }
+}
+lighter(document.querySelector('#lighterFirst'));
+lighter(document.querySelector('#lighterSecond'));
+lighter(document.querySelector('#lighterThird'));
+
+/*function alert (message) {
+    console.log('Your message: ' + message)
+}
+alert('dkjfkls');
+alert('Hello');
+alert('Alex');
+console.log(lighters);*/
+/*
+redLighter.onclick = function () {
+    redLighter.classList.add('active');
+};
+yellowLighter.onclick = function () {
+    yellowLighter.classList.add('active');
+};
+greenLighter.onclick = function () {
+    greenLighter.classList.add('active');
+};
+*/
+
+//При нажатии на кнопку загорается лампа, при повторном нажатии лампа тухнет.
+/*function lampOnOff(htmlElement) {
+    console.log(htmlElement);
+    const lamp = htmlElement.querySelector('.lamp');
+    const button = htmlElement.querySelector('.button');
+    button.onclick = function () {
+        if(lamp.classList.contains('active')){
+            lamp.classList.remove('active');
+        }
+        else {
+            lamp.classList.add('active');
+        }
+    }
+}
+lampOnOff(document.querySelector('#firstLamp'));
+lampOnOff(document.querySelector('#secondLamp'));
+lampOnOff(document.querySelector('#thirdLamp'));*/
+
 /***/ }),
 
 /***/ 8:

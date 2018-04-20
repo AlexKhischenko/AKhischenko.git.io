@@ -38,3 +38,43 @@ a:visited,
 a:hover {
   text-decoration: none;
   color: #FFFFFF; }
+
+.wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 450px;
+  margin: 50px auto; }
+  .wrapper .block {
+    width: 100%; }
+    .wrapper .block .header {
+      height: 4rem;
+      background-color: rgba(63, 81, 181, 0.9);
+      transition: background-color 0.2s linear;
+      color: #FFFFFF;
+      padding: 1.1rem 1.5rem;
+      font-size: 1.3rem;
+      cursor: pointer; }
+    .wrapper .block .target .header {
+      border: 1px solid #FFFFFF; }
+    .wrapper .block .content {
+      position: absolute;
+      visibility: hidden;
+      -ms-transform: scale(1);
+          transform: scale(1);
+      background-color: #e8eaf6;
+      padding: 1.5rem;
+      font-size: 1rem;
+      font-weight: 200;
+      letter-spacing: 0.03rem;
+      line-height: 1.5rem;
+      box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.12); }
+    .wrapper .block.active .content {
+      visibility: visible;
+      position: relative;
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+      transition: all 0.5s linear; }
+    .wrapper .block .header:hover {
+      background-color: #3246b5; }
