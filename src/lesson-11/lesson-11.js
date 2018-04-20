@@ -5,7 +5,7 @@ const yellowLighter = document.querySelector('.yellow');
 const greenLighter = document.querySelector('.green');*/
 
 //Светофор
-/*function lighter(htmlElement) {
+function lighter(htmlElement) {
     console.log(htmlElement);
     const lighters = htmlElement.querySelectorAll('.light');
     for(let light of lighters) {
@@ -22,7 +22,7 @@ const greenLighter = document.querySelector('.green');*/
 }
 lighter(document.querySelector('#lighterFirst'));
 lighter(document.querySelector('#lighterSecond'));
-lighter(document.querySelector('#lighterThird'));*/
+lighter(document.querySelector('#lighterThird'));
 
 
 /*function alert (message) {

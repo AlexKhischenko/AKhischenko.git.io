@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin: 50px auto;
+  .block {
+    width: 100%;
+    .header {
+      height: 4rem;
+      background-color: rgba(63,81,181,.9);
+      transition: background-color 0.2s linear;
+      color: #FFFFFF;
+      padding: 1.1rem 1.5rem;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .target {
+      .header {
+        border: 1px solid #FFFFFF;
+      }
+    }
+    .content {
+      position: absolute;
+      visibility: hidden;
+      transform: scale(1);
+      background-color: rgba(232,234,246,1);
+      padding: 1.5rem;
+      font-size: 1rem;
+      font-weight: 200;
+      letter-spacing: 0.03rem;
+      line-height: 1.5rem;
+      box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.12);
+    }
+    &.active {
+      .content {
+        visibility: visible;
+        position: relative;
+        transform: scale(1.05);
+        transition: all 0.5s linear;
+      }
+    }
+    .header:hover {
+      background-color: rgb(50,70,181);
+    }
+  }
+}
