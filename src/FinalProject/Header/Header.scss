@@ -1,0 +1,11 @@
+.page-header {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(43,43,43,.3);
+  &__nav {
+    border: 1px solid black;
+    height: 4rem;
+  }
+}
