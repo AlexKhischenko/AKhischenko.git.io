@@ -1,11 +1,52 @@
 .page-header {
   position: absolute;
+  z-index: 2;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(43,43,43,.3);
+  background-color: rgba(43,43,43,.4);
   &__nav {
-    border: 1px solid black;
-    height: 4rem;
+    display: flex;
+    height: 4.5rem;
+    color: #FFFFFF;
+    .nav-logo {
+      width: 12%;
+      font-family: $baseFontFamilyScriptina;
+      font-size: 1.7rem;
+      letter-spacing: 0.4rem;
+      line-height: 4rem;
+    }
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      width: 75%;
+      &__item {
+        padding: 1.5rem 0.5rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.25rem;
+      }
+      &__item:hover {
+        text-shadow: 1px 1px 2px #FFFFFF;
+      }
+      &__space {
+        padding: 1.5rem 1.75rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.25rem;
+      }
+    }
+    .nav-social {
+      display: flex;
+      justify-content: flex-end;
+      width: 13%;
+      &__link {
+        padding: 1.5rem 0.9rem;
+      }
+      &__link:hover {
+        text-shadow: 1px 1px 2px #FFFFFF;
+      }
+      &__link:last-child {
+        padding: 1.5rem 0.8rem 1.5rem 0.9rem;
+      }
+    }
   }
 }
