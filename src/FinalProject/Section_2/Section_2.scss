@@ -1,13 +1,15 @@
 .s2 {
   position: relative;
   z-index: 1;
-  height: 40rem;
+  //height: 750px;
   width: 100%;
-  background-color: rgba(254,254,252,1);
+  background: url("../../assets/FinalProject/whiteBackground.png") no-repeat center;
+  background-size: cover;
+  border-top: 10px solid #FFFFFF;
   &-circle {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -47%);
+    transform: translate(-50%, -54%);
     z-index: 1;
     width: 75px;
     height: 75px;
@@ -17,22 +19,189 @@
   &-image {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -47%);
+    transform: translate(-50%, -54%);
     z-index: 2;
+    > img {
+      width: 100%;
+      display: block;
+    }
   }
   &-body {
     display: flex;
-    border: 1px solid black;
+    flex-wrap: wrap;
     height: 100%;
     &__left {
       height: 100%;
       width: 50%;
-      border: 1px dashed gray;
+      text-align: center;
+      @include tablet {
+        padding: 0.5rem;
+        width: 100%;
+      }
+      @include mobile {
+        padding: 0.5rem;
+        width: 100%;
+      }
+      > h2 {
+        padding: 5.3rem 0 0;
+        font-size: 3rem;
+        font-weight: 700;
+        color: rgba(86,83,76,.95);
+      }
+      > h4 {
+        font-size: 0.85rem;
+        letter-spacing: 0.1rem;
+        color: rgba(164,125,94,1);
+        padding-bottom: 3.5rem;
+      }
+      > p {
+        white-space: pre-line;
+        font-family: $baseFontFamily;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: rgba(86,83,76,1);
+        letter-spacing: 0.15rem;
+        line-height: 1.6rem;
+        padding-bottom: 2.2rem;
+        @include laptop {
+          white-space: normal;
+          padding: 0 0.5rem 2.2rem;
+        }
+        @include tablet {
+          white-space: normal;
+          padding: 0 0.5rem 2.2rem;
+        }
+        @include mobile {
+          white-space: normal;
+          letter-spacing: 0.05rem;
+          padding: 0 0.5rem 2.2rem;
+        }
+      }
+      > h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: rgba(86,83,76,.95);
+        padding-bottom: 2.5rem;
+        @include mobile {
+          padding-bottom: 1.5rem;
+        }
+      }
+      .picture-content {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__text {
+          width: 120px;
+          padding: 0.85rem 0;
+          border-top: 1px solid rgba(215,213,202,1);
+          border-bottom: 1px solid rgba(215,213,202,1);
+          color: rgba(86,83,76,.95);
+          font-size: 1.5rem;
+          @include mobile {
+            width: 100px;
+          }
+        }
+        &__img {
+          padding: 0 1rem;
+        > img {
+          width: 100%;
+          display: block;
+        }
+        }
+      }
+      .quotes {
+        margin: 0 auto;
+        color: rgba(170,168,164,1);
+        font-size: 3rem;
+        line-height: 1.5rem;
+        width: 70%;
+        @include laptop {
+          width: 85%;
+        }
+        @include tablet {
+          width: 60%;
+        }
+        @include mobile {
+          width: 90%;
+        }
+      }
+      .q1 {
+        text-align: left;
+      }
+      .q2 {
+        text-align: right;
+        @include laptop {
+          padding-bottom: 2.5rem;
+        }
+      }
+      .quote {
+        font-family: $baseFontFamilyScriptina;
+        font-size: 1.2rem;
+        color: rgba(164,125,94,1);
+        line-height: 2rem;
+        font-weight: 600;
+        padding: 0.5rem 0;
+      }
     }
     &__right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       height: 100%;
       width: 50%;
-      border: 1px dashed gray;
+      padding: 6.4rem 0.5rem;
+      @include tablet {
+        padding: 1.5rem 1rem;
+        width: 100%;
+      }
+      @include mobile {
+        padding: 1.5rem 0.5rem;
+        width: 100%;
+      }
+      .right__text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-47%);
+        color: rgba(201,177,118,1);
+        font-size: 1.9rem;
+        line-height: 2.3rem;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        z-index: 3;
+        @include laptop {
+          font-size: 1.7rem;
+          line-height: 2rem;
+        }
+        @include tablet {
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+        }
+        @include mobile {
+          font-size: 1.4rem;
+          line-height: 1.5rem;
+        }
+      }
+      .right__image{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        opacity: 0.97;
+        > img {
+          width: 100%;
+          display: block;
+        }
+      }
+      .right__picture {
+        width: 50%;
+        > img {
+          width: 100%;
+          padding: 0.5rem;
+          display: block;
+        }
+      }
     }
   }
 }

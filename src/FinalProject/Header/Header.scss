@@ -14,16 +14,27 @@
       font-family: $baseFontFamilyScriptina;
       font-size: 1.7rem;
       letter-spacing: 0.4rem;
-      line-height: 4rem;
+      line-height: 3rem;
+      padding-left: 0.3rem;
+      @include tablet {
+        letter-spacing: 0.1rem;
+      }
     }
     .nav-menu {
       display: flex;
       justify-content: center;
       width: 75%;
+      @include tablet {
+        width: 78%;
+      }
       &__item {
         padding: 1.5rem 0.5rem;
         font-size: 0.85rem;
         letter-spacing: 0.25rem;
+        @include tablet {
+          letter-spacing: 0.2rem;
+          padding: 1.5rem 0.3rem;
+        }
       }
       &__item:hover {
         text-shadow: 1px 1px 2px #FFFFFF;
@@ -32,14 +43,26 @@
         padding: 1.5rem 1.75rem;
         font-size: 0.85rem;
         letter-spacing: 0.25rem;
+        @include laptop {
+          padding: 1.5rem 0.5rem;
+        }
+        @include tablet {
+          padding: 1.5rem 0.1rem;
+        }
       }
     }
     .nav-social {
       display: flex;
       justify-content: flex-end;
       width: 13%;
+      @include tablet {
+        width: 10%;
+      }
       &__link {
         padding: 1.5rem 0.9rem;
+        @include tablet {
+          padding: 1.5rem 0.6rem;
+        }
       }
       &__link:hover {
         text-shadow: 1px 1px 2px #FFFFFF;
