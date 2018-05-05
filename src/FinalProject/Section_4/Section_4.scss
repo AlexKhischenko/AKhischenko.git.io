@@ -1,0 +1,41 @@
+.s4 {
+  background: url("../../assets/FinalProject/thirdBackground.png") center /cover no-repeat;
+  &-body {
+    @include flexWrap;
+    @include fullSize;
+    padding: 4.5rem 0;
+    &__left {
+      width: 50%;
+      text-align: center;
+      > h2 {
+        color: rgba(255,255,255,1);
+        font-size: 3.5rem;
+        letter-spacing: 0.1rem;
+        line-height: 3.7rem;
+      }
+      > h4 {
+        font-size: 1.1rem;
+        color: rgba(200,165,147,1);
+      }
+      > h3 {
+        color: rgba(255,255,255,1);
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        padding: 3.2rem 0 0.5rem;
+      }
+      > p {
+        font-family: $baseFontFamily;
+        color: rgba(164,162,160,1);
+        letter-spacing: 0.08rem;
+        padding-bottom: 0.7rem;
+      }
+      > span {
+        color: rgba(223,198,145,1);
+        font-size: 2rem;
+      }
+    }
+    &__right {
+      width: 50%;
+    }
+  }
+}

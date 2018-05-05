@@ -1,8 +1,174 @@
 .s3 {
-  position: relative;
-  z-index: 1;
-  height: 860px;
-  width: 100%;
-  background: url("../../assets/FinalProject/secondBackground.png") no-repeat center;
-  background-size: cover;
+  background: url("../../assets/FinalProject/secondBackground.png") center /cover no-repeat;
+  &-body {
+    height: 100%;
+    width: 100%;
+    padding: 7rem 0;
+    &-content {
+      position: relative;
+      @include flexWrap;
+      width: 85%;
+      margin: 0 auto;
+      @include tablet {
+        width: 75%;
+      }
+      &__left {
+        width: 38%;
+        @include tablet {
+          width: 100%;
+        }
+        > img {
+          width: 100%;
+          display: block;
+        }
+      }
+      &__middle {
+        width: 52%;
+        background: #FFFFFF url("../../assets/FinalProject/mill.png") no-repeat right bottom;
+        box-shadow: 3px 3px 10px #8080808c;
+        padding: 3rem 2rem 1.5rem 3.5rem;
+        @include laptop {
+          padding: 2rem 1.5rem 1.5rem 2.5rem;
+        }
+        @include tablet {
+          width: 100%;
+          padding: 1.5rem 1.5rem 1.5rem 2rem;
+        }
+        > h2 {
+          @include headerText;
+          padding: 1rem 0 0;
+          @include laptop {
+            font-size: 2.5rem;
+            padding: 0;
+          }
+          @include tablet {
+            font-size: 2.5rem;
+            padding: 0;
+          }
+        }
+        > h4 {
+          @include underHeaderText;
+          padding: 0 0 3.5rem;
+          @include laptop {
+            padding: 0 0 3rem;
+          }
+          @include tablet {
+            padding: 0 0 2.5rem;
+          }
+        }
+        > p {
+          white-space: pre-line;
+          font-family: $baseFontFamily;
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: rgba(86,83,76,1);
+          letter-spacing: 0.15rem;
+          line-height: 1.5rem;
+          padding-bottom: 6rem;
+          @include laptop {
+            white-space: normal;
+          }
+          @include tablet {
+            white-space: normal;
+          }
+        }
+        .slider {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          &-toggle {
+            width: 2rem;
+            height: 2rem;
+            border: 2px solid rgba(86,83,76,1);
+            color: rgba(86,83,76,1);
+            font-size: 1rem;
+            border-radius: 50%;
+            text-align: center;
+            margin: 0 0.3rem;
+            background: none;
+            cursor: pointer;
+          }
+          &-toggle:hover {
+            box-shadow: 2px 2px 3px #80808052,
+                       -2px -2px 3px #80808052,
+                       -2px 2px 3px #80808052,
+                        2px -2px 3px #80808052;
+          }
+          .toggle-off {
+            border: 2px solid rgba(216,187,163,1);
+            color: rgba(216,187,163,1);
+          }
+          > img {
+            display: block;
+            padding: 0 0.85rem;
+          }
+        }
+      }
+      &__right {
+        width: 10%;
+        @include tablet {
+          display: none;
+        }
+      }
+      &__price {
+        position: absolute;
+        left: 100%;
+        top: -10%;
+        transform: translateX(-100%);
+        width: 180px;
+        height: 200px;
+        box-shadow: 3px 3px 10px #8080808c;
+        @include laptop {
+          left: 95%;
+          width: 160px;
+          height: 180px;
+        }
+        @include tablet {
+          left: 105%;
+          top: -5%;
+          width: 160px;
+          height: 180px;
+        }
+        .price-content {
+          background: url("../../assets/FinalProject/picture_5.png") no-repeat center;
+          background-size: cover;
+          @include fullSize;
+          text-align: center;
+          > h3 {
+            font-size: 1.2rem;
+            color: rgba(164,125,94,1);
+            letter-spacing: 0.1rem;
+            padding: 1.7rem 0 0;
+            @include  laptop {
+              padding: 1rem 0 0;
+            }
+            @include tablet {
+              padding: 1rem 0 0;
+            }
+          }
+          > h1 {
+            font-size: 6rem;
+            color: rgba(223,198,145,1);
+            letter-spacing: 0.5rem;
+            line-height: 6rem;
+            @include laptop {
+              font-size: 5rem;
+              line-height: 5.5rem;
+            }
+            @include tablet {
+              font-size: 5rem;
+              line-height: 5.5rem;
+            }
+          }
+          > h4 {
+            font-size: 1.1rem;
+            color: rgba(151,146,133,1);
+            letter-spacing: 0.1rem;
+            padding-bottom: 1.7rem;
+          }
+        }
+      }
+    }
+  }
 }

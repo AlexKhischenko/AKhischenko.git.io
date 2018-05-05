@@ -1,15 +1,8 @@
 .s2 {
-  position: relative;
-  z-index: 1;
-  //height: 750px;
-  width: 100%;
-  background: url("../../assets/FinalProject/whiteBackground.png") no-repeat center;
-  background-size: cover;
+  background: url("../../assets/FinalProject/whiteBackground.png") center /cover no-repeat;
   border-top: 10px solid #FFFFFF;
   &-circle {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -54%);
+    @include horizontalCenter;
     z-index: 1;
     width: 75px;
     height: 75px;
@@ -17,9 +10,7 @@
     background-color: #FFFFFF;
   }
   &-image {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -54%);
+    @include horizontalCenter;
     z-index: 2;
     > img {
       width: 100%;
@@ -27,9 +18,8 @@
     }
   }
   &-body {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
+    @include flexWrap;
+    @include fullSize;
     &__left {
       height: 100%;
       width: 50%;
@@ -44,15 +34,11 @@
       }
       > h2 {
         padding: 5.3rem 0 0;
-        font-size: 3rem;
-        font-weight: 700;
-        color: rgba(86,83,76,.95);
+        @include headerText;
       }
       > h4 {
-        font-size: 0.85rem;
-        letter-spacing: 0.1rem;
-        color: rgba(164,125,94,1);
-        padding-bottom: 3.5rem;
+        @include underHeaderText;
+        padding: 0 0 3.5rem;
       }
       > p {
         white-space: pre-line;

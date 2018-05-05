@@ -1,0 +1,70 @@
+.s5 {
+  background-color: rgba(243,241,233,1);
+  &-body {
+    position: relative;
+    @include flexWrap;
+    @include fullSize;
+    padding: 0.5rem 0 15rem;
+    &__picture {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    &__center {
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      padding-top: 4rem;
+      > h2 {
+        @include headerText;
+        padding: 1rem 0 0;
+      }
+      > h4 {
+        @include underHeaderText;
+      }
+    }
+    &__left {
+      width: 33%;
+      text-align: center;
+      > div {
+        width: 100%;
+        padding-bottom: 1rem;
+        > img {
+          margin: 0 auto;
+          display: block;
+          border-radius: 50%;
+          box-shadow: 0 9px 20px #80808052;
+        }
+      }
+      > h3 {
+        color: rgba(164,125,94,1);
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        padding-bottom: 1rem;
+      }
+      > p {
+        white-space: pre-line;
+        font-family: $baseFontFamily;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: rgba(86,83,76,1);
+        letter-spacing: 0.15rem;
+        line-height: 1.2rem;
+        padding-bottom: 3rem;
+      }
+    }
+    &__right {
+      width: 67%;
+      > div {
+        width: 100%;
+        padding: 5rem 1rem 3rem;
+        > img {
+          width: 100%;
+          display: block;
+          border: 10px solid #FFFFFF;
+        }
+      }
+    }
+  }
+}
