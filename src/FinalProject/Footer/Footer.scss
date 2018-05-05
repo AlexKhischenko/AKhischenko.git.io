@@ -1,0 +1,60 @@
+.page-footer {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 97%;
+  &__menu {
+    display: flex;
+    justify-content: center;
+    height: 4.5rem;
+    text-align: center;
+    .menu {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid rgba(194,190,186,1);
+      border-bottom: 1px solid rgba(194,190,186,1);
+      @include tablet {
+        width: 42%;
+      }
+      &__item {
+        padding: 1.5rem 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.25rem;
+        color: rgba(59,58,53,1);
+        @include tablet {
+          letter-spacing: 0.2rem;
+          padding: 1.5rem 0.3rem;
+        }
+      }
+      &__item:hover {
+        text-shadow: 1px 1px 2px gray;
+      }
+      &__space {
+        padding: 1.5rem 1.75rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.25rem;
+        @include laptop {
+          padding: 1.5rem 0.5rem;
+        }
+        @include tablet {
+          padding: 1.5rem 0.1rem;
+        }
+      }
+    }
+    .footer-logo {
+      width: 20%;
+      font-family: $baseFontFamilyScriptina;
+      font-size: 1.7rem;
+      letter-spacing: 0.4rem;
+      line-height: 3rem;
+      color: rgba(59,58,53,1);
+      @include tablet {
+        width: 16%;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+}
