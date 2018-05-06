@@ -1,8 +1,10 @@
 .page-footer {
-  position: absolute;
-  z-index: 1;
+  //position: absolute;
+  //z-index: 1;
   width: 100%;
-  top: 97%;
+  background-color: rgba(243,241,233,1);
+  padding: 3rem 0;
+  //top: 97%;
   &__menu {
     display: flex;
     justify-content: center;

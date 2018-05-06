@@ -182,11 +182,16 @@
       }
       .right__picture {
         width: 50%;
+        transition: 0.25s ease-in-out;
         > img {
           width: 100%;
           padding: 0.5rem;
           display: block;
         }
+      }
+      .right__picture:hover {
+        transform: scale(1.03);
+        box-shadow: 0 7px 15px 4px rgba(220,220,220,1);
       }
     }
   }

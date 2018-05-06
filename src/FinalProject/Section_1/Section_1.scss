@@ -60,6 +60,13 @@
       width: 200px;
       background-color: rgba(124,122,116,0.75);
       border: 1px dashed rgba(124,122,116,1);
+      cursor: pointer;
+      box-shadow: 0 0 40px 40px rgba(124,122,116,0) inset;
+      transition: .2s ease-in-out;
+    }
+    > button:hover {
+      box-shadow: 0 0 10px 0 #FFFFFF inset, 0 0 10px 4px #FFFFFF;
+      background-color: rgba(124,122,116,0.9);
     }
   }
   &-cover {
