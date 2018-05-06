@@ -4,24 +4,42 @@
     @include flexWrap;
     @include fullSize;
     padding: 4.5rem 0;
+    @include mobile {
+      padding: 3rem 0;
+    }
     &__left {
       width: 50%;
       text-align: center;
+      @include mobile {
+        width: 100%;
+      }
       > h2 {
         color: rgba(255,255,255,1);
         font-size: 3.5rem;
         letter-spacing: 0.1rem;
         line-height: 3.7rem;
+        @include mobile {
+          @include headerTextMobile;
+          line-height: 2.7rem;
+        }
       }
       > h4 {
         font-size: 1.1rem;
         color: rgba(200,165,147,1);
+        @include mobile {
+          @include underHeaderTextMobile;
+        }
       }
       > h3 {
         color: rgba(255,255,255,1);
         font-size: 1.8rem;
         letter-spacing: 0.1rem;
         padding: 3.2rem 0 0.5rem;
+        @include mobile {
+          font-size: 1.6rem;
+          letter-spacing: 0.05rem;
+          padding: 2.2rem 0 0.5rem;
+        }
       }
       > p {
         font-family: $baseFontFamily;
@@ -36,6 +54,9 @@
     }
     &__right {
       width: 50%;
+      @include mobile {
+        width: 100%;
+      }
     }
   }
 }

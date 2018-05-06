@@ -1,5 +1,6 @@
 .s1 {
   height: 960px;
+  z-index: 1;
   background: url("../../assets/FinalProject/firstBackground.png") center /cover no-repeat;
   @include  laptop {
     height: 100vh;
@@ -85,13 +86,5 @@
     @include mobile {
       background: rgba(43,43,43,0.3);
     }
-  }
-  &-circle {
-    @include absoluteCenter;
-    z-index: 2;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background-image: radial-gradient(rgba(43,43,43,.7), rgba(150,150,150,.05));
   }
 }

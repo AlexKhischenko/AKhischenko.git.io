@@ -65,3 +65,14 @@
   font-weight: 700;
   letter-spacing: 0.05rem;
 }
+
+@mixin headerTextMobile {
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+}
+
+@mixin underHeaderTextMobile {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}

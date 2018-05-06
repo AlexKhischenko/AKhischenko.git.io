@@ -4,6 +4,9 @@
     height: 100%;
     width: 100%;
     padding: 7rem 0;
+    @include mobile {
+      padding: 3rem 0;
+    }
     &-content {
       position: relative;
       @include flexWrap;
@@ -12,14 +15,21 @@
       @include tablet {
         width: 75%;
       }
+      @include mobile {
+        width: 85%;
+      }
       &__left {
         width: 38%;
         @include tablet {
           width: 100%;
         }
+        @include  mobile {
+          width: 100%;
+        }
         > img {
           width: 100%;
           display: block;
+          border: 5px solid #FFFFFF;
         }
       }
       &__middle {
@@ -34,6 +44,10 @@
           width: 100%;
           padding: 1.5rem 1.5rem 1.5rem 2rem;
         }
+        @include mobile {
+          width: 100%;
+          padding: 1.5rem 1rem 1.5rem 1rem;
+        }
         > h2 {
           @include headerText;
           padding: 1rem 0 0;
@@ -45,6 +59,10 @@
             font-size: 2.5rem;
             padding: 0;
           }
+          @include mobile {
+            @include headerTextMobile;
+            padding: 0 0 0.5rem;
+          }
         }
         > h4 {
           @include underHeaderText;
@@ -53,6 +71,10 @@
             padding: 0 0 3rem;
           }
           @include tablet {
+            padding: 0 0 2.5rem;
+          }
+          @include mobile {
+            @include underHeaderTextMobile;
             padding: 0 0 2.5rem;
           }
         }
@@ -71,12 +93,25 @@
           @include tablet {
             white-space: normal;
           }
+          @include mobile {
+            white-space: normal;
+            padding-bottom: 3rem;
+            letter-spacing: 0.1rem;
+          }
         }
         .slider {
           display: flex;
           justify-content: center;
           align-items: center;
           width: 100%;
+          > img {
+            display: block;
+            padding: 0 0.85rem;
+            @include mobile {
+              width: 4.5rem;
+              padding: 0 0.4rem;
+            }
+          }
           &-toggle {
             width: 2rem;
             height: 2rem;
@@ -88,6 +123,11 @@
             margin: 0 0.3rem;
             background: none;
             cursor: pointer;
+            @include mobile {
+              width: 1.5rem;
+              height: 1.5rem;
+              font-size: 0.75rem;
+            }
           }
           &-toggle:hover {
             box-shadow: 2px 2px 3px #80808052,
@@ -99,15 +139,14 @@
             border: 2px solid rgba(216,187,163,1);
             color: rgba(216,187,163,1);
           }
-          > img {
-            display: block;
-            padding: 0 0.85rem;
-          }
         }
       }
       &__right {
         width: 10%;
         @include tablet {
+          display: none;
+        }
+        @include mobile {
           display: none;
         }
       }
@@ -130,6 +169,12 @@
           width: 160px;
           height: 180px;
         }
+        @include mobile {
+          left: 105%;
+          top: -3%;
+          width: 140px;
+          height: 160px;
+        }
         .price-content {
           background: url("../../assets/FinalProject/picture_5.png") no-repeat center;
           background-size: cover;
@@ -146,6 +191,11 @@
             @include tablet {
               padding: 1rem 0 0;
             }
+            @include mobile {
+              padding: 1rem 0 0;
+              font-size: 1rem;
+              letter-spacing: 0.05rem;
+            }
           }
           > h1 {
             font-size: 6rem;
@@ -159,6 +209,10 @@
             @include tablet {
               font-size: 5rem;
               line-height: 5.5rem;
+            }
+            @include mobile {
+              font-size: 4.5rem;
+              line-height: 5rem;
             }
           }
           > h4 {

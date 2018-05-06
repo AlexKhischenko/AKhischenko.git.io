@@ -35,10 +35,16 @@
       > h2 {
         padding: 5.3rem 0 0;
         @include headerText;
+        @include mobile {
+          @include headerTextMobile;
+        }
       }
       > h4 {
         @include underHeaderText;
         padding: 0 0 3.5rem;
+        @include mobile {
+          @include underHeaderTextMobile;
+        }
       }
       > p {
         white-space: pre-line;
@@ -139,11 +145,11 @@
       width: 50%;
       padding: 6.4rem 0.5rem;
       @include tablet {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 0.5rem 2.5rem;
         width: 100%;
       }
       @include mobile {
-        padding: 1.5rem 0.5rem;
+        padding: 1.5rem 0.5rem 2.5rem;
         width: 100%;
       }
       .right__text {
@@ -165,7 +171,7 @@
           line-height: 1.8rem;
         }
         @include mobile {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
           line-height: 1.5rem;
         }
       }
@@ -178,6 +184,10 @@
         > img {
           width: 100%;
           display: block;
+          @include mobile {
+            width: 80%;
+            margin: 0 auto;
+          }
         }
       }
       .right__picture {

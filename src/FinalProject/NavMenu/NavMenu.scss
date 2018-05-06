@@ -1,0 +1,18 @@
+.nav-menu__icon {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  z-index: 4;
+  left: 100%;
+  top: 1.5rem;
+  transform: translateX(-4rem);
+  padding: 0.1rem;
+  visibility: hidden;
+  @include mobile {
+    visibility: visible;
+  }
+  > div {
+    border: 1px solid #FFFFFF;
+    margin: 0.3rem 0;
+  };
+}
