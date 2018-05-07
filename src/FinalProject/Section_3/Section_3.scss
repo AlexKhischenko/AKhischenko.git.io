@@ -107,6 +107,9 @@
           > img {
             display: block;
             padding: 0 0.85rem;
+            @include laptop {
+              padding: 0 0.4rem;
+            }
             @include mobile {
               width: 4.5rem;
               padding: 0 0.4rem;

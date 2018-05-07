@@ -103,10 +103,179 @@
         @include mobile {
           padding: 1rem 1rem 2rem;
         }
-        > img {
-          width: 100%;
-          display: block;
-          border: 10px solid #FFFFFF;
+        > div {
+          position: relative;
+          > button {
+            position: absolute;
+            top: 100%;
+            transform: translate(-10%, -60%);
+            color: rgba(223,198,145,1);
+            font-family: $baseFontFamilyAlegreya;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            height: 55px;
+            width: 180px;
+            background-color: rgba(255,255,255,1);
+            border: 1px dashed rgba(223,198,145,1);
+            cursor: pointer;
+            box-shadow: 0 0 40px 40px rgba(124,122,116,0) inset;
+            transition: .2s ease-in-out;
+            @include laptop {
+              height: 50px;
+              width: 175px;
+              font-size: 1rem;
+            }
+            @include tablet {
+              transform: translate(-3%, -60%);
+              height: 50px;
+              width: 175px;
+              font-size: 1rem;
+            }
+            @include mobile {
+              transform: translate(-3%, -60%);
+              height: 40px;
+              width: 120px;
+              font-size: 0.75rem;
+              letter-spacing: 0.05rem;
+            }
+          }
+          > button:hover {
+            box-shadow: 0 0 10px 0 #FFFFFF inset, 0 0 10px 4px #FFFFFF;
+            background-color: rgba(124,122,116,0.9);
+            color: rgba(255,255,255,1);
+          }
+          > img {
+            width: 100%;
+            display: block;
+            border: 10px solid #FFFFFF;
+          }
+          .right-menu {
+            position: absolute;
+            height: 108%;
+            left: 100%;
+            transform: translate(-105%, -4%);
+            top: 0;
+            width: 23%;
+            @include laptop {
+              transform: translate(-106%, -4%);
+            }
+            @include tablet {
+              transform: translate(-105%, -4%);
+            }
+            @include mobile {
+              transform: translate(-111.5%, -4%);
+            }
+            &__item {
+              height: 33.333%;
+              width: 100%;
+              text-align: center;
+              background-color: rgba(255,255,255,.75);
+              > h3 {
+                font-size: 1rem;
+                color: rgba(164,125,94,1);
+                letter-spacing: 0.1rem;
+                padding: 3rem 0 0;
+                @include  laptop {
+                  padding: 1.5rem 0 0;
+                }
+                @include tablet {
+                  padding: 1.5rem 0 0;
+                }
+                @include mobile {
+                  font-size: 0.8rem;
+                  letter-spacing: 0.05rem;
+                  padding: 0.5rem 0 0;
+                }
+              }
+              > h1 {
+                font-size: 3.8rem;
+                color: rgba(0,0,0,.6);
+                letter-spacing: 0.25rem;
+                line-height: 4rem;
+                @include laptop {
+                  font-size: 3.5rem;
+                  line-height: 3.5rem;
+                }
+                @include tablet {
+                  font-size: 3.5rem;
+                  line-height: 3.5rem;
+                }
+                @include mobile {
+                  font-size: 2rem;
+                  line-height: 2rem;
+                }
+              }
+              > h4 {
+                font-size: 1.1rem;
+                color: rgba(151,146,133,1);
+                letter-spacing: 0.1rem;
+                padding-bottom: 1.7rem;
+                @include mobile {
+                  font-size: 0.8rem;
+                  letter-spacing: 0.05rem;
+                  padding-bottom: 0.5rem;
+                }
+              }
+            }
+            &__item:first-child {
+              border-bottom: 1px solid rgba(225,124,74,1);
+            }
+            &__item:last-child {
+              background: #FFFFFF url("../../assets/FinalProject/picture_5.png") center /cover no-repeat;
+              > h3 {
+                font-size: 1.1rem;
+                color: rgba(164,125,94,1);
+                letter-spacing: 0.1rem;
+                padding: 1.7rem 0 0;
+                @include  laptop {
+                  padding: 1.2rem 0 0;
+                  letter-spacing: 0.05rem;
+                }
+                @include tablet {
+                  padding: 1.2rem 0 0;
+                  letter-spacing: 0.05rem;
+                }
+                @include mobile {
+                  padding: 0.5rem 0 0;
+                  font-size: 0.8rem;
+                  letter-spacing: 0.02rem;
+                }
+              }
+              > h1 {
+                font-size: 6rem;
+                color: rgba(223,198,145,1);
+                letter-spacing: 0.5rem;
+                line-height: 6rem;
+                @include laptop {
+                  font-size: 4rem;
+                  line-height: 4rem;
+                  letter-spacing: 0.3rem;
+                }
+                @include tablet {
+                  font-size: 4rem;
+                  line-height: 4rem;
+                  letter-spacing: 0.3rem;
+                }
+                @include mobile {
+                  font-size: 2.3rem;
+                  line-height: 2.3rem;
+                  letter-spacing: 0.1rem;
+                }
+              }
+              > h4 {
+                font-size: 1.1rem;
+                color: rgba(151,146,133,1);
+                letter-spacing: 0.1rem;
+                padding-bottom: 1.7rem;
+                @include mobile {
+                  font-size: 0.8rem;
+                  letter-spacing: 0.05rem;
+                  padding-bottom: 0.5rem;
+                }
+              }
+            }
+          }
         }
       }
     }
