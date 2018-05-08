@@ -1,8 +1,7 @@
 .s3 {
   background: url("../../assets/FinalProject/secondBackground.png") center /cover no-repeat;
   &-body {
-    height: 100%;
-    width: 100%;
+    @include fullSize;
     padding: 7rem 0;
     @include mobile {
       padding: 3rem 0;
